@@ -1,0 +1,32 @@
+html{
+    scroll-behavior: smooth;   
+}
+.featured-collections__panel{
+    display: block;
+    opacity: 1;
+}
+
+.custom-collection-title{
+    padding-top: 100px;
+    color: var(--color-body-text);
+}
+.featured-collections-tab__item a {
+    text-decoration: none;
+    color: var(--color-headings-and-links);
+    font-size: 20px;
+}
+.featured-collections-tab__item--active .featured-collections__item-title::after, .featured-collections-tab__item--single .featured-collections__item-title::after, .featured-collections__title .featured-collections__item-title::after{
+    display: none;
+}
+.featured-collections-tab__item--active {
+    .featured-collections__item-title::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -.5rem;
+        height: 2px;
+        width: 100%;
+        background-color: var(--color-headings-and-links);
+        display: inline-block;
+    }
+}
